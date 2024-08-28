@@ -13,6 +13,7 @@ public class PrestamoHipotecario {
     private String nroPrestamo;
     private int valorPrestamo;
     private int cantAños;
+    private final double tasa = 10.5;
 
     public PrestamoHipotecario() {
     }
@@ -57,7 +58,7 @@ public class PrestamoHipotecario {
     }
     
     public double calculoPrimeraCuota(){
-        return (this.valorPrestamo * ((10.5/100)/12) * Math.pow(1 + ((10.5/100)/12), ((10.5/100)*12)));
+        return ((this.valorPrestamo) * (this.tasa /12/100));
     }
     
     public double calculartotalPago(){
